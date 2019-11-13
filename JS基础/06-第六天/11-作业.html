@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = 'abaasdffggghhjjkkgfddsssss3444343'
+            // 1.字符串的长度
+        let length = str.length
+        console.log(`字符串长度为${length}`);
+        // 2.取出指定位置的字符
+        let ling = str.charAt(0)
+        let three = str.charAt(3)
+        let five = str.charAt(5)
+        let nine = str.charAt(9)
+        console.log(`0位:${ling},three位:${three},five位:${five},nine位:${nine}`);
+        // 3.查找指定字符是否在以上字符串中存在
+        if (str.indexOf('i') === -1) {
+            console.log(`以上字符串不存在i`);
+
+        }
+        // 4.替换指定的字符，
+        while (str.indexOf('g') !== -1) {
+            str = str.replace('g', '22')
+        }
+        while (str.indexOf('ss') !== -1) {
+            str = str.replace('ss', 'b')
+        }
+        console.log(str);
+
+
+        // 5.截取指定开始位置到结束位置到字符串
+        let str1 = str.substr(1, 5)
+        console.log(str1);
+
+        // 6.找出以上字符串中出现最多到字符和出现到次数
+        let obj = {}
+        for (let i = 0; i < str.length; i++) {
+            let chars = str.charAt(i)
+            if (obj[chars]) {
+                obj[chars]++
+            } else {
+                obj[chars] = 1
+            }
+        }
+        let max = 0;
+        let ch = ''
+        for (let k in obj) {
+            if (obj[k] > max) {
+                max = obj[k]
+                ch = k
+            }
+        }
+        console.log(`${ch}出现了${max}次`);
+    </script>
+</body>
+
+</html>

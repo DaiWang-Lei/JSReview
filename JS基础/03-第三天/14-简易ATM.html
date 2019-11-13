@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let play = prompt('请输入你要进行的操作：\n 1.存钱\n 2.取钱\n 3.显示余额\n 4.退出')
+        let oldMoney = 100
+        let nowMoney = oldMoney
+        let newMoney = 0
+        while (play === "1") {
+            newMoney = prompt("请输入存入的金额：")
+            nowMoney = nowMoney + (newMoney - 0)
+            alert(`卡内余额为：${nowMoney}`)
+            play = prompt('请输入你要进行的操作：\n 1.存钱\n 2.取钱\n 3.显示余额\n 4.退出')
+        }
+        while (play === "2") {
+            getMoney = prompt("请输入取出的金额：")
+            nowMoney = nowMoney - (getMoney - 0)
+            alert(`卡内余额为：${nowMoney}`)
+            play = prompt('请输入你要进行的操作：\n 1.存钱\n 2.取钱\n 3.显示余额\n 4.退出')
+        }
+        while (play === "3") {
+            alert(`卡内余额为：${nowMoney}`)
+            play = prompt('请输入你要进行的操作：\n 1.存钱\n 2.取钱\n 3.显示余额\n 4.退出')
+        }
+        while (play === "4") {
+            alert('欢迎下次再来！')
+            break
+        }
+
+
+
+        // if () {
+        //    
+        //     play = prompt('请输入你要进行的操作：\n 1.存钱\n 2.取钱\n 3.显示余额\n 4.退出')
+        // } else if (play === "2") {
+        //     var getMoney = prompt("请输入取出的金额：")
+        //     nowMoney = oldMoney - (getMoney - 0)
+        //     alert(`卡内余额为：${nowMoney}`)
+        //     play = prompt('请输入你要进行的操作：\n 1.存钱\n 2.取钱\n 3.显示余额\n 4.退出')
+
+        // } else if (play === "3") {
+        //     alert(`卡内余额为：${oldMoney}`)
+        //     play = prompt('请输入你要进行的操作：\n 1.存钱\n 2.取钱\n 3.显示余额\n 4.退出')
+        // } else {
+        //     alert('退出成功！')
+        // }
+    </script>
+</body>
+
+</html>

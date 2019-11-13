@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getTimes() {
+            let time = new Date()
+            let y = time.getFullYear()
+            let m = time.getMonth() + 1
+            let d = time.getDate()
+            let hh = time.getHours()
+            let xq = time.getDay()
+            let week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+            hh = hh >= 10 ? hh : '0' + hh
+
+            let mm = time.getMinutes()
+            mm = mm >= 10 ? mm : '0' + mm
+
+            let ss = time.getSeconds()
+            ss = ss >= 10 ? ss : '0' + ss
+            return (`${y}年${m}月${d}日 ${week[xq]} ${hh}:${mm}:${ss}`);
+        }
+        setInterval(() => {
+            console.log(getTimes());
+        }, 1000);
+    </script>
+</body>
+
+</html>

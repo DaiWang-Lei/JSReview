@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.打印一个人的一生
+        let age = 1;
+        do {
+            if (age == 1) {
+                console.log(`代罔今年${age}岁了,他出生了！🎉`)
+
+            } else {
+                console.log(`代罔今年${age}岁了🎉`)
+
+            }
+            age++
+        } while (age <= 100)
+
+        // 2.计算1-100的和
+        let num = 1;
+        let sum = 0;
+        do {
+            sum += num
+            num++
+        } while (num <= 100)
+        console.log(sum);
+
+        // 3.你爱我吗？
+        // let love = prompt('你爱我吗？')
+        do {
+            var love = prompt('你爱我吗')
+        } while (love !== "我爱你")
+        alert('我也爱你！')
+    </script>
+</body>
+
+</html>

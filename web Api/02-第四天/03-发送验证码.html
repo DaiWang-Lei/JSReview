@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" placeholder="请输入您的手机号">
+    <button>发送验证码</button>
+
+    <script>
+        let ipt = document.querySelector('input')
+        let btn = document.querySelector('button')
+        let timer = null
+        let time = 5
+        btn.addEventListener('click', () => {
+            btn.disabled = true
+            let time1 = setInterval(() => {
+                if (time == 0) {
+                    btn.disabled = false
+                    btn.innerHTML = '发送验证码'
+                    time = 5
+                    clearInterval(time1)
+                } else {
+                    btn.innerHTML = `请在${time}秒后再次发送`
+                    time -= 1
+                }
+            }, 1000)
+            console.log(this);
+
+        })
+        btn.onclick = () => {
+            console.log(this);
+        }
+        btn.addEventListener('click', function() {
+            console.log(this);
+        })
+    </script>
+</body>
+
+</html>

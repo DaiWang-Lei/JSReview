@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [5, 2, 99, 101, 67, 77, 999]
+        let arr1 = [5, 3, 3, 3, 3, 34, 124, 3333, 99, 101, 67, 77]
+
+
+        function getMax(arr) {
+            let max = arr[0]
+            for (let i = 1; i <= arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i]
+                }
+            }
+            return max
+
+        }
+        console.log(getMax(arr1))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.打印一个人的一生
+        let i = 1;
+        while (i <= 100) {
+            if (i == 1) {
+                console.log(`代罔今年${i}岁了,他🐣了！`);
+            } else if (i == 100) {
+                console.log(`代罔今年${i}岁了,他的路还很长！`);
+            } else {
+                console.log(`代罔今年${i}岁了！`);
+            }
+            i++
+        }
+
+
+        // 2.计算1——100 之间所有整数的和
+        let sum = 0;
+        let one = 1;
+        while (one <= 100) {
+            sum += one
+            one++
+        }
+        console.log(sum);
+
+        // 3.弹出一个提示框，你爱我吗？如果输入我爱你，就结束\
+        let love = prompt('你爱我吗？')
+        while (love !== "我爱你") {
+            love = prompt('你爱我吗？')
+        }
+        alert('谢谢！')
+    </script>
+</body>
+
+</html>

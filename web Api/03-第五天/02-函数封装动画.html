@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="div2" style="width: 100px;height: 100px;background-color: rgb(177, 135, 58);position: absolute;"></div>
+    <button style="position: absolute;">点击开始移动500</button>
+    <button class="btn2" style="position: absolute; left: 100px;">点击开始移动800</button>
+
+    <script>
+        let div2 = document.querySelector('.div2')
+        let btn500 = document.querySelector('button')
+        let btn800 = document.querySelector('.btn2')
+
+
+
+        btn500.addEventListener('click', function() {
+            animate(div2, 500)
+        })
+        btn800.addEventListener('click', function() {
+            animate(div2, 800, () => {
+                div2.style.background = 'pink'
+            })
+        })
+
+
+
+        function animate(ele, target, callback) {
+            clearInterval(ele.timer)
+            ele.timer = setInterval(function() {
+                // let distance = target - ele.offsetLeft
+                // if (distance > 0) {
+                //     step = Math.ceil((distance) / 10)
+                // } else {
+                //     step = Math.floor((distance) / 10)
+                // }
+
+                let step = (target - ele.offsetLeft) / 10
+                step = step > 0 ? Math.ceil(step) : Math.floor(step)
+                if (ele.offsetLeft == target) {
+                    clearInterval(ele.timer)
+                    if (callback) {
+                        callback()
+                    }
+                } else {
+                    ele.style.left = ele.offsetLeft + step + 'px'
+                }
+            }, 30)
+        }
+    </script>
+</body>

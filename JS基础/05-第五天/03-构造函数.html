@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function hero(name, type, blood) {
+            this.name = name;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function(attack) {
+                console.log(attack);
+            }
+        }
+        let lianpo = new hero('廉颇', '力量型', '500血量')
+        console.log(lianpo);
+        let houyi = new hero('后羿', '射手型', '100血量')
+        console.log(houyi);
+        houyi.attack('远程');
+    </script>
+</body>
+
+</html>

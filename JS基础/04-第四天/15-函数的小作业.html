@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 用户输入任意两个数字的任意算数运算符，弹出最后的计算结果
+        function getRes() {
+            let num1 = prompt('请输入第一个数字：')
+            let num2 = prompt('请输入第二个数字：')
+            let icon = prompt('请输入要进行的运算符：(+ - * /)')
+            switch (icon) {
+                case "+":
+                    alert((num1 - 0) + (num2 - 0))
+                    break
+                case "-":
+                    alert((num1 - 0) - (num2 - 0))
+                    break
+
+                case "*":
+                    alert((num1 - 0) * (num2 - 0))
+                    break
+
+                case "/":
+                    alert((num1 - 0) / (num2 - 0))
+                    break
+
+            }
+        }
+        // getRes()
+
+        // 用户输入任意两个数字，弹出最大值
+        function getMax() {
+            let num3 = prompt('请输入第一个数字：')
+            let num4 = prompt('请输入第二个数字：')
+            alert(num3 > num4 ? num3 : num4)
+        }
+        // getMax()
+
+
+
+        // 3.判断是否是质数，如果是质数就返回true。否则返回false
+        function zhishu() {
+            let num5 = parseInt(prompt('请输入一个数字：'))
+            if (typeof num5 != "number" || num5 < 2) {
+                return false
+            }
+            if (num5 == 2) {
+                return true
+            } else if (num5 % 2 === 0) {
+                return false
+            }
+            for (let i = 1; i <= num5; i++) {
+                if (num5 % i === 0) {
+                    return true
+                }
+            }
+        }
+        let res = zhishu()
+        console.log(res);
+
+
+
+        // 4.能翻转传入的任意数组
+        function getResver(arr) {
+            let newArr = []
+            for (let i = arr.length - 1; i >= 0; i--) {
+                newArr[newArr.length] = arr[i]
+            }
+            return newArr
+        }
+        let arr = [1, 2, 3, 4, 5]
+        let res1 = getResver(arr)
+        console.log(res1);
+
+
+        // 5.能把传入的数组按照从小到大进行排序，把排序的结果返回
+        function getSort(arr) {
+            for (let i = 0; i <= arr.length - 1; i++) {
+                for (let j = 0; j <= arr.length - i - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        let temp = arr[j]
+                        arr[j] = arr[j + 1]
+                        arr[j + 1] = temp
+                    }
+                }
+            }
+            return arr
+        }
+        let arr1 = [34, 5, 6, 43, 34, 564]
+        let res2 = getSort(arr1)
+        console.log(res2);
+    </script>
+</body>
+
+</html>

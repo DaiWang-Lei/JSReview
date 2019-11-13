@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text"> <span>请输入用户名</span>
+    <script>
+        let ipt = document.querySelector('input')
+        let span = document.querySelector('span')
+        let reg = /^[a-zA-Z0-9_-]{6,16}$/
+        ipt.onblur = function() {
+            if (reg.test(`${ipt.value}`)) {
+                span.innerHTML = '用户名格式输入正确🙆‍♂️'
+                span.style.color = 'green'
+            } else {
+                span.innerHTML = '用户名格式输入不正确♂🙅‍♂️'
+                span.style.color = 'red'
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.求1--100之间所有数的总和和平均值
+        let sum = 0;
+        let everge = 0;
+        for (let i = 1; i <= 100; i++) {
+            sum += i;
+        }
+        everge = sum / 100;
+        console.log(sum);
+        console.log(everge);
+
+        // 2.求出1-100之间所有偶数的和
+        let sum1 = 0
+        for (let j = 1; j <= 100; j++) {
+            if (j % 2 == 0) {
+                sum1 += j
+            }
+        }
+        console.log(sum1);
+
+        // 3.求100以内7的倍数的总和
+        let sum2 = 0;
+        for (let q = 1; q <= 100; q++) {
+            if (q % 7 == 0) {
+                sum2 += q
+            }
+        }
+        console.log(sum2);
+
+        // 4.for循环打印矩形
+        let star = ''
+        for (let w = 1; w <= 5; w++) {
+            for (let e = 1; e <= 6; e++) {
+                star += '⭐️'
+            }
+            star += '\n'
+        }
+        console.log(star);
+
+        // for 循环打印三角形 
+        let trangle = ''
+        for (let r = 1; r <= 5; r++) {
+            for (let t = 1; t <= r; t++) {
+                trangle += '⭐️'
+            }
+            trangle += '\n'
+        }
+        console.log(trangle);
+
+
+        // for 循环打印99乘法表
+        let str = ''
+        for (let a = 1; a <= 9; a++) {
+            for (let s = 1; s <= a; s++) {
+                str += `${s}x${a}=${a*s}\t `
+            }
+            str += '\n'
+        }
+        console.log(str)
+
+        // 接受用户输入的用户名和密码,若用户名为admin，密码为123456，则提示用户登陆成功
+        // 否则一直输入
+        do {
+            var user = prompt('请输入用户名：')
+        } while (user !== "admin")
+        do {
+            var password = prompt('请输入密码：')
+
+        } while (password !== "123456")
+        alert('登陆成功')
+
+
+        // 1-100的累加值，跳过所有个数为3的数字
+        let sum3 = 0;
+        for (let z = 1; z <= 100; z++) {
+            if (z % 3 == 0) {
+                continue
+            }
+            sum3 += z
+        }
+        console.log(sum3);
+    </script>
+</body>
+
+</html>

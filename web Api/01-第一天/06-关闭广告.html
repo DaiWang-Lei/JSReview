@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .div1 {
+            width: 70%;
+            height: 400px;
+            background-color: skyblue;
+            margin: 100px auto;
+            position: relative;
+            color: aliceblue;
+            text-align: center;
+            line-height: 400px;
+        }
+        
+        .close {
+            position: absolute;
+            top: 100px;
+            right: 90px;
+            border: 1px solid #000;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">我是广告哈哈哈哈</div>
+    <div class="close">X</div>
+    <script>
+        let div1 = document.querySelector('.div1')
+        let close = document.querySelector('.close')
+        close.onclick = () => {
+            div1.style.display = 'none'
+            close.style.display = 'none'
+
+        }
+    </script>
+</body>
+
+</html>

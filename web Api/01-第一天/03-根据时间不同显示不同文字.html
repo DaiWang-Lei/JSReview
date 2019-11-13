@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>上午好</div>
+    <script>
+        let div = document.querySelector('div')
+
+        // 获取时间
+        let date = new Date()
+        let h = date.getHours() + 6
+        if (h < 12) {
+            div.innerHTML = '上午好'
+        } else if (h < 18) {
+            div.innerHTML = '下午好'
+        } else if (h > 18) {
+            div.innerHTML = '晚上好'
+        }
+    </script>
+</body>
+
+</html>

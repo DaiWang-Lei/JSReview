@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div style="width: 300px;height: 300px;border: 1px solid #000;">广告</div>
+     -->
+    <div>
+        <img src="../images/zxy.jpg" alt="">
+    </div>
+    <button>我还想看一会</button>
+    <script>
+        let div = document.querySelector('div')
+        let btn = document.querySelector('button')
+        let time1 = setTimeout(() => {
+            div.style.display = 'none'
+        }, 5000)
+        btn.addEventListener('click', () => {
+            console.log(this);
+            clearTimeout(time1)
+
+        })
+    </script>
+</body>
+
+</html>

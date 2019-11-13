@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./animate.js"></script>
+    <script src="./index.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        .focus {
+            position: relative;
+            width: 700px;
+            height: 300px;
+            /* border: 1px solid #000; */
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        
+        .focus ul {
+            width: 500%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .focus ul li {
+            list-style: none;
+            float: left;
+        }
+        
+        img {
+            width: 700px;
+            height: 300px;
+        }
+        
+        .left {
+            display: none;
+            position: absolute;
+            background-color: pink;
+            left: 0;
+            top: 50%;
+            line-height: 40px;
+            text-align: center;
+            width: 30px;
+            height: 40px;
+            opacity: .5;
+            z-index: 2;
+            border-radius: 0 50% 50% 0;
+        }
+        
+        .right {
+            display: none;
+            line-height: 40px;
+            text-align: center;
+            width: 30px;
+            height: 40px;
+            position: absolute;
+            background-color: orange;
+            right: 0;
+            top: 50%;
+            opacity: .5;
+            z-index: 2;
+            border-radius: 50% 0 0 50%;
+        }
+        
+        .circle {
+            position: absolute;
+            bottom: 10px;
+            left: 50px;
+        }
+        
+        .circle li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            /*background-color: #fff;*/
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            margin: 0 3px;
+            border-radius: 50%;
+            /*鼠标经过显示小手*/
+            cursor: pointer;
+        }
+        
+        .current {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="focus">
+
+        <a class="left" href="javascript:;">&lt;</a>
+
+
+
+        <a class="right" href="javascript:;">&gt;</a>
+
+        <ul>
+            <li>
+                <a href="#"><img src="../images/zxy.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="../images/ldh.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="../images/zxy.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="../images/ldh.jpg" alt=""></a>
+            </li>
+        </ul>
+        <!-- 小圆圈 -->
+        <ol class="circle">
+
+        </ol>
+
+    </div>
+</body>
+
+</html>

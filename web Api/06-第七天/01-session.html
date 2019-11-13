@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <button class="set">存储数据</button>
+    <button class="get">获取数据</button>
+    <button class="del">删除数据</button>
+    <button class="clearAll">获取数据</button>
+    <div class="textt"> da </div>
+
+    <script>
+        let ipt = document.querySelector('input')
+        let set = document.querySelector('.set')
+        let get = document.querySelector('.get')
+        let del = document.querySelector('.del')
+        let clearAll = document.querySelector('.clearAll')
+        let textt = document.querySelector('textt')
+
+        set.addEventListener('click', function() {
+            let val = ipt.value
+            sessionStorage.setItem('uname', val)
+        })
+        get.addEventListener('click', function() {
+            let t = sessionStorage.getItem('uname');
+            console.log(t);
+        })
+    </script>
+
+</body>
+
+</html>

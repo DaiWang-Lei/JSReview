@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">开关灯</button>
+    <script>
+        let bodyEle = document.body
+        let btn = document.querySelector('#btn')
+        console.log(btn);
+        let flag = 0
+        btn.onclick = () => {
+            if (!flag) {
+                bodyEle.style.backgroundColor = '#000'
+                flag = !flag
+            } else {
+                bodyEle.style.backgroundColor = '#fff'
+                flag = !flag
+            }
+        }
+    </script>
+</body>
+
+</html>

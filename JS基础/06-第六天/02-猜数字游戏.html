@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值 
+        }
+        let random = getRandom(1, 50)
+        for (let i = 1; i <= 10; i++) {
+            let userNum = parseInt(prompt('请输入1~50之间的一个数字：'))
+            if (userNum > random) {
+                alert('数字大了，继续猜')
+            } else if (userNum < random) {
+                alert('数字小了，继续猜')
+            } else {
+                alert('恭喜你，猜对了！')
+                break
+            }
+        }
+        alert('10次机会用完了！,别灰心，继续来')
+
+
+        // let num = getRandom(1, 10)
+        // while (userNum > num) {
+        //     alert('数字大了，继续猜')
+        //     userNum = parseInt(prompt('请输入一个数字：'))
+        // }
+        // while (userNum < num) {
+        //     alert('数字小了，继续猜')
+        //     userNum = parseInt(prompt('请输入一个数字：'))
+        // }
+        // while (userNum === num) {
+        //     alert('恭喜你，猜对了！')
+        //     break
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const myObj = {
+            pi: 3.14159265357,
+            max: function() {
+                // if (arguments == []) {
+                //     return -Infinity
+                // }
+                let max = arguments[0]
+                for (let i = 0; i < arguments.length; i++) {
+                    if (arguments[i] > max) {
+                        max = arguments[i]
+                    }
+                }
+                return max
+            },
+            min: function() {
+                // if (arguments == null) {
+                //     return -Infinity
+                // }
+                let min = arguments[0]
+                for (let i = 0; i < arguments.length; i++) {
+                    if (arguments[i] < min) {
+                        min = arguments[i]
+                    }
+                }
+                return min
+            }
+        }
+        console.log(myObj.pi);
+        console.log(myObj.max(12, 33, 44, 22, 55, 6, 7, 88));
+        console.log(myObj.min(12, 33, 44, 22, 55, 6, 7, 88));
+        // console.log(myObj.max());
+    </script>
+</body>
+
+</html>_

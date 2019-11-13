@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="width: 200px;height: 200px;background-color: orange;position: absolute; "></div>
+    <script>
+        let div = document.querySelector('div')
+        let startX = 0 //手指开始的位置
+        let startY = 0
+        let x = 0 //盒子位置
+        let y = 0
+        div.addEventListener('touchstart', function(e) {
+            startX = e.targetTouches[0].pageX
+            startY = e.targetTouches[0].pageY
+            x = this.offsetLeft
+            x = this.offsetTop
+        })
+        div.addEventListener('touchmove', function(e) {
+            let moveX = e.targetTouches[0].pageX - startX
+            let moveY = e.targetTouches[0].pageY - startY
+
+            this.style.left = x + moveX + 'px'
+            this.style.top = y + moveY + 'px'
+            e.preventDefault()
+        })
+    </script>
+</body>
+
+</html>

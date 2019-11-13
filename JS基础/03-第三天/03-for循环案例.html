@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.求1-100之间所有数的平均值
+        let sum = 0;
+        for (let i = 1; i <= 100; i++) {
+            sum += i
+        }
+        console.log(`1-100之间所有数的平均值${sum / 100}`);
+
+        // 2.求1-100之间所有偶数和奇数的和
+        let odd = 0;
+        let even = 0;
+        for (let i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                even += i
+            } else {
+                odd += i
+            }
+        }
+        console.log(`奇数和为：${odd}`)
+        console.log(`偶数和为：${even}`)
+
+        // 3.求1-100之间所有能被3整初的数字之和
+        let three = 0;
+        for (let i = 1; i <= 100; i++) {
+            if (i % 3 == 0) {
+                three += i;
+            }
+        }
+        console.log(`能被3整除的数字之和${three}`);
+    </script>
+</body>
+
+</html>

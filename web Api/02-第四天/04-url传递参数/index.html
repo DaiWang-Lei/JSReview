@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        let uname = location.search.substr(1).split('=')[1]
+            // 先去掉问号
+            // 再从等号分割
+            // 再去新数组中的第二个
+        let div = document.querySelector("div")
+        div.innerHTML = `欢迎${uname}`
+        div.style.color = 'red'
+    </script>
+</body>
+
+</html>

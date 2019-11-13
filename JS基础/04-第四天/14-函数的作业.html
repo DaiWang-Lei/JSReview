@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getResult() {
+            let play = prompt('欢迎使用简易计算器:\n 1.加法运算:\n 2.减法运算:\n 3.乘法运算:\n 4.除法运算:\n 5.退出计算器\n 请输入你的选项:')
+            while (play === "1") {
+                let num1 = prompt('请输入第一个数字:')
+                let num2 = prompt('请输入第二个数字：')
+                alert(parseFloat(num1) + parseFloat(num2))
+                play = prompt('欢迎使用简易计算器:\n 1.加法运算:\n 2.减法运算:\n 3.乘法运算:\n 4.除法运算:\n 5.退出计算器\n 请输入你的选项:')
+            }
+            while (play === "2") {
+                let num3 = prompt('请输入第一个数字:')
+                let num4 = prompt('请输入第二个数字：')
+                alert(parseFloat(num3) - parseFloat(num4))
+                play = prompt('欢迎使用简易计算器:\n 1.加法运算:\n 2.减法运算:\n 3.乘法运算:\n 4.除法运算:\n 5.退出计算器\n 请输入你的选项:')
+
+            }
+            while (play === "3") {
+                let num5 = prompt('请输入第一个数字:')
+                let num6 = prompt('请输入第二个数字：')
+                alert(parseFloat(num5) * parseFloat(num6))
+                play = prompt('欢迎使用简易计算器:\n 1.加法运算:\n 2.减法运算:\n 3.乘法运算:\n 4.除法运算:\n 5.退出计算器\n 请输入你的选项:')
+
+            }
+            while (play === "4") {
+                let num7 = prompt('请输入第一个数字:')
+                let num8 = prompt('请输入第二个数字：')
+                alert(parseFloat(num7) / parseFloat(num8))
+                play = prompt('欢迎使用简易计算器:\n 1.加法运算:\n 2.减法运算:\n 3.乘法运算:\n 4.除法运算:\n 5.退出计算器\n 请输入你的选项:')
+
+            }
+            while (play === '5') {
+                alert('退出成功！')
+                break
+            }
+        }
+        getResult()
+    </script>
+</body>
+
+</html>
